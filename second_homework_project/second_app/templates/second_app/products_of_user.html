@@ -1,0 +1,25 @@
+{% extends 'second_app/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <h3> {{ title }} {{ user }} </h3>
+    <h4> Orders by last week </h4>
+    {% for product in week_products %}
+        <ul>
+            <li>{{ product }}</li>
+        </ul>
+    {% endfor %}
+    <h4> Orders by last month </h4>
+    {% for product in month_products %}
+        <ul>
+            <li>{{ product }}</li>
+        </ul>
+    {% endfor %}
+    <h4> Orders by last year </h4>
+    {% for product in year_products %}
+        <ul>
+            <li>{{ product }}</li>
+        </ul>
+    {% endfor %}
+{% endblock %}
